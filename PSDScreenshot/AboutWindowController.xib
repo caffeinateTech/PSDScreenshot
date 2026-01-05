@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutWindowController">
+            <connections>
+                <outlet property="facebookBtn" destination="Szb-Rm-zfk" id="9DX-AG-P7C"/>
+                <outlet property="mailBtn" destination="1rE-vz-VBF" id="tGh-ma-AFJ"/>
+                <outlet property="websiteBtn" destination="EC0-wE-cuN" id="avp-40-aJH"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+            <rect key="contentRect" x="196" y="240" width="700" height="450"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-we-XIL">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Lxq-TQ-hFu"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTt-hl-oOd">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="aboutBackground" id="loK-B3-AJJ"/>
+                    </imageView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-fN-iWt">
+                        <rect key="frame" x="139" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconMeme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ecr-OL-ngf">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="p9K-0t-nLH"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="4fo-aK-1SZ">
+                        <rect key="frame" x="490" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconStayFocused" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="0eG-3K-JMe">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="Wba-RL-jf0"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-Ym-mYe">
+                        <rect key="frame" x="607" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconBatteryTracker" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="usM-1q-kgE">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="zI4-hr-W8M"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="eCG-ks-poV">
+                        <rect key="frame" x="237" y="220" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Leaf Guide" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="rcf-U3-y48">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="jwM-sH-u5i"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="jsK-Af-SJT">
+                        <rect key="frame" x="471" y="323" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="StayFocused" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="AZU-xI-d2W">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="pXp-wK-kXT"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="31g-qw-NJw">
+                        <rect key="frame" x="588" y="323" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Battery Tracker" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="vzq-Ck-rho">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="geS-Hz-2A3"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="DWG-Sa-Vh9">
+                        <rect key="frame" x="373" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconPeriodicTable" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="BrE-wm-Kcj">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="ceg-6W-TmR"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-fx-Lot">
+                        <rect key="frame" x="373" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconSnowFall" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="o0o-Hr-Yhd">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="v8M-tS-dXX"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="91F-5w-Hng">
+                        <rect key="frame" x="490" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconBackgroundClock" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="p8W-NQ-a7R">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="CJb-96-F2j"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="PB3-Yx-cU1">
+                        <rect key="frame" x="607" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconStatisticalCalc" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="VUF-Uu-inG">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="i2u-V3-raD"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="oG5-wn-OF6">
+                        <rect key="frame" x="346" y="323" width="124" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="PeriodicTableElements" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="7Vd-VD-9lr">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="g8a-fT-Mhv"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="jRr-dy-H9L">
+                        <rect key="frame" x="354" y="220" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="SnowFall" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="UAd-8u-Bmg">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="P05-sU-JKd"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-lR-Tda">
+                        <rect key="frame" x="475" y="220" width="100" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="BackgroundClock" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="qVG-De-U7Z">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="yWM-23-IuQ"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="9LB-fU-usd">
+                        <rect key="frame" x="574" y="220" width="132" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Statistical Calculations" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Qct-8t-r7w">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="qea-OZ-2Ea"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-fA-9N7">
+                        <rect key="frame" x="198" y="145" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconEasyTabCalc" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="w6c-FG-pBB">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="RbG-l9-e7A"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-b8-Wlz">
+                        <rect key="frame" x="315" y="145" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconFinancialCalculators" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="uMi-2z-LzZ">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="dlg-6W-eTG"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="r2f-97-dJ4">
+                        <rect key="frame" x="432" y="145" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconStocks" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="50p-V2-YMU">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="NMD-Ql-Rlp"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="vXS-RB-ZXX">
+                        <rect key="frame" x="179" y="117" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="EasyTabCalculator" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="jJ6-Lg-gYk">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="AgM-7s-bTx"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="zrU-fD-w15">
+                        <rect key="frame" x="291" y="117" width="118" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Financial Calculators" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="ooq-F0-nkP">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="VSD-zu-HU5"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-mS-s8g">
+                        <rect key="frame" x="413" y="117" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="StocksBondsCalc" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="eGU-lL-fvQ">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="rSA-nJ-BWG"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQe-II-gWL">
+                        <rect key="frame" x="325" y="84" width="50" height="25"/>
+                        <buttonCell key="cell" type="squareTextured" title="Rate" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rFH-26-qmV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedRate:" target="-2" id="CE6-6A-Mkl"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzA-Je-yOX">
+                        <rect key="frame" x="31" y="8" width="130" height="20"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Contact:" id="Tnf-m6-KhW">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pI6-y5-pzA">
+                        <rect key="frame" x="31" y="34" width="130" height="20"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Facebook:" id="uAa-e8-Oa9">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EC0-wE-cuN">
+                        <rect key="frame" x="244" y="60" width="380" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="www.gremlinssoft.wordpress.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Zfr-HE-4V4">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedWebsite:" target="-2" id="pQI-lw-Xaw"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rE-vz-VBF">
+                        <rect key="frame" x="244" y="8" width="380" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="veghferencrobert@yahoo.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="5O4-43-OEW">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedMail:" target="-2" id="hZB-ze-SHt"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Szb-Rm-zfk">
+                        <rect key="frame" x="244" y="34" width="380" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="www.facebook.com/gremlinssoft" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="69j-Bl-OXm">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedFacebook:" target="-2" id="57l-D0-lZ2"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-aI-Eth">
+                        <rect key="frame" x="31" y="60" width="130" height="20"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Website:" id="3OK-1b-hKg">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQf-1q-nj4">
+                        <rect key="frame" x="22" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconEasyCalc" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="V6Q-Ot-Fm3">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="bm8-oW-6t4"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-Ec-9gU">
+                        <rect key="frame" x="256" y="351" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconFallingHearts" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="J2h-Ce-zdI">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="Djn-Mi-RMQ"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="twI-v3-aTV">
+                        <rect key="frame" x="256" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconLeafFuide" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="IO8-4C-ugS">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="BYK-gj-nhm"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCa-0Q-q9Y">
+                        <rect key="frame" x="3" y="323" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="EasyCalculator" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="I9h-Ol-WGa">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="g5W-L5-v31"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="SNj-BQ-ehX">
+                        <rect key="frame" x="120" y="323" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Meme Creator" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="ec2-Bv-vwW">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="Obr-Fx-JL8"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-r2-D2L">
+                        <rect key="frame" x="237" y="323" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Falling Hearts" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="7fl-y8-aMd">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="NSL-j0-h6b"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="Gql-BD-aYH">
+                        <rect key="frame" x="22" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconBankingCalc" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ac4-G4-qoV">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="Lyw-Lj-q6k"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="KIn-Gz-A9G">
+                        <rect key="frame" x="139" y="248" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconFinanceCalc" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="L7R-gQ-sP5">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="a68-S0-MCY"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="fiW-ba-Tqq">
+                        <rect key="frame" x="3" y="220" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Banking Calculators" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="kQt-VD-5Xa">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="ACS-6p-Ncx"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="gWT-nm-dsI">
+                        <rect key="frame" x="113" y="220" width="122" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="CorporateFinanceCalc" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="LUF-96-cVo">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="iGK-Qr-yAp"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="GkO-Wi-Lpo">
+                        <rect key="frame" x="81" y="145" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="iconFinacialCalc" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="f4C-IX-ovh">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="VdY-Xe-lFu"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-RB-jvD">
+                        <rect key="frame" x="62" y="117" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="GeneralFinanceCalc" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="DtW-Pe-JIu">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="szt-CA-5dc"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="16" translatesAutoresizingMaskIntoConstraints="NO" id="hU3-2e-lTJ">
+                        <rect key="frame" x="549" y="145" width="70" height="70"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="capsyIcon" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="aek-8q-ygj">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="rzz-ep-sJz"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="16" translatesAutoresizingMaskIntoConstraints="NO" id="a74-fN-rJ9">
+                        <rect key="frame" x="530" y="117" width="108" height="20"/>
+                        <buttonCell key="cell" type="bevel" title="Capsy" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="NFH-1X-2I6">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedIcon:" target="-2" id="oZ9-mR-Loo"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+    <resources>
+        <image name="aboutBackground" width="1400" height="900"/>
+        <image name="capsyIcon" width="256" height="256"/>
+        <image name="iconBackgroundClock" width="256" height="256"/>
+        <image name="iconBankingCalc" width="256" height="256"/>
+        <image name="iconBatteryTracker" width="256" height="256"/>
+        <image name="iconEasyCalc" width="256" height="256"/>
+        <image name="iconEasyTabCalc" width="256" height="256"/>
+        <image name="iconFallingHearts" width="256" height="256"/>
+        <image name="iconFinacialCalc" width="256" height="256"/>
+        <image name="iconFinanceCalc" width="256" height="256"/>
+        <image name="iconFinancialCalculators" width="256" height="256"/>
+        <image name="iconLeafFuide" width="256" height="256"/>
+        <image name="iconMeme" width="256" height="256"/>
+        <image name="iconPeriodicTable" width="256" height="256"/>
+        <image name="iconSnowFall" width="256" height="256"/>
+        <image name="iconStatisticalCalc" width="256" height="256"/>
+        <image name="iconStayFocused" width="256" height="256"/>
+        <image name="iconStocks" width="256" height="256"/>
+    </resources>
+</document>

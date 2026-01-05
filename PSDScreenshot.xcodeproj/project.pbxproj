@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		722C6A601CA1A5470055C403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A5F1CA1A5470055C403 /* AppDelegate.m */; };
+		722C6A631CA1A5470055C403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A621CA1A5470055C403 /* main.m */; };
+		722C6A651CA1A5470055C403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C6A641CA1A5470055C403 /* Assets.xcassets */; };
+		722C6A681CA1A5480055C403 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722C6A661CA1A5480055C403 /* MainMenu.xib */; };
+		722C6A731CA1A5480055C403 /* PSDScreenshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A721CA1A5480055C403 /* PSDScreenshotTests.m */; };
+		722C6A7E1CA1A5480055C403 /* PSDScreenshotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A7D1CA1A5480055C403 /* PSDScreenshotUITests.m */; };
+		722C6A931CA1BB6F0055C403 /* NSDataPSDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A8D1CA1BB6F0055C403 /* NSDataPSDAdditions.m */; };
+		722C6A941CA1BB6F0055C403 /* PSDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A8F1CA1BB6F0055C403 /* PSDLayer.m */; };
+		722C6A951CA1BB6F0055C403 /* PSDWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6A921CA1BB6F0055C403 /* PSDWriter.m */; };
+		722C6AD11CA40D270055C403 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6AD01CA40D270055C403 /* MAAttachedWindow.m */; };
+		727618CC1CA52476009C48FA /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727618CA1CA52476009C48FA /* AboutWindowController.m */; };
+		727618CD1CA52476009C48FA /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727618CB1CA52476009C48FA /* AboutWindowController.xib */; };
+		727618DF1CA524A5009C48FA /* iconEasyCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618CF1CA524A5009C48FA /* iconEasyCalc.png */; };
+		727618E01CA524A5009C48FA /* iconMeme.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D01CA524A5009C48FA /* iconMeme.png */; };
+		727618E11CA524A5009C48FA /* iconFallingHearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D11CA524A5009C48FA /* iconFallingHearts.png */; };
+		727618E21CA524A5009C48FA /* iconLeafFuide.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D21CA524A5009C48FA /* iconLeafFuide.png */; };
+		727618E31CA524A5009C48FA /* iconStayFocused.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D31CA524A5009C48FA /* iconStayFocused.png */; };
+		727618E41CA524A5009C48FA /* iconBatteryTracker.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D41CA524A5009C48FA /* iconBatteryTracker.png */; };
+		727618E51CA524A5009C48FA /* iconBankingCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D51CA524A5009C48FA /* iconBankingCalc.png */; };
+		727618E61CA524A5009C48FA /* iconFinanceCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D61CA524A5009C48FA /* iconFinanceCalc.png */; };
+		727618E71CA524A5009C48FA /* iconPeriodicTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D71CA524A5009C48FA /* iconPeriodicTable.png */; };
+		727618E81CA524A5009C48FA /* iconSnowFall.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D81CA524A5009C48FA /* iconSnowFall.png */; };
+		727618E91CA524A5009C48FA /* iconBackgroundClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D91CA524A5009C48FA /* iconBackgroundClock.png */; };
+		727618EA1CA524A5009C48FA /* iconStatisticalCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DA1CA524A5009C48FA /* iconStatisticalCalc.png */; };
+		727618EB1CA524A5009C48FA /* iconFinacialCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DB1CA524A5009C48FA /* iconFinacialCalc.png */; };
+		727618EC1CA524A5009C48FA /* iconEasyTabCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DC1CA524A5009C48FA /* iconEasyTabCalc.png */; };
+		727618ED1CA524A5009C48FA /* iconFinancialCalculators.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DD1CA524A5009C48FA /* iconFinancialCalculators.png */; };
+		727618EE1CA524A5009C48FA /* iconStocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DE1CA524A5009C48FA /* iconStocks.png */; };
+		727618F21CA526F3009C48FA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618F11CA526F2009C48FA /* ServiceManagement.framework */; };
+		727618F41CA52997009C48FA /* capsyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618F31CA52997009C48FA /* capsyIcon.png */; };
+		727618F81CA594E1009C48FA /* IWGlobalHotkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 727618F71CA594E1009C48FA /* IWGlobalHotkey.m */; };
+		727618FB1CA59503009C48FA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618FA1CA59503009C48FA /* Carbon.framework */; };
+		727618FD1CA5950E009C48FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618FC1CA5950E009C48FA /* QuartzCore.framework */; };
+		72BE12FA1CA91FD40065E490 /* PSDScreenshotHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72BE12EB1CA91D600065E490 /* PSDScreenshotHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		72BE12FC1CA924E30065E490 /* shutterSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 72BE12FB1CA924E30065E490 /* shutterSound.wav */; };
+		72BE13001CA926CC0065E490 /* MenuBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BE12FF1CA926CC0065E490 /* MenuBarIcon.png */; };
+		72BE13021CA9294F0065E490 /* bipSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 72BE13011CA9294F0065E490 /* bipSound.wav */; };
+		72BE130B1CA942FA0065E490 /* settingsBackground1.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BE130A1CA942FA0065E490 /* settingsBackground1.png */; };
+		72BE130D1CA943B30065E490 /* aboutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BE130C1CA943B30065E490 /* aboutBackground.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		722C6A6F1CA1A5480055C403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 722C6A531CA1A5470055C403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 722C6A5A1CA1A5470055C403;
+			remoteInfo = PSDScreenshot;
+		};
+		722C6A7A1CA1A5480055C403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 722C6A531CA1A5470055C403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 722C6A5A1CA1A5470055C403;
+			remoteInfo = PSDScreenshot;
+		};
+		72BE12EA1CA91D600065E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72BE12B41CA91D5F0065E490;
+			remoteInfo = PSDScreenshotHelper;
+		};
+		72BE12EC1CA91D600065E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72BE12C71CA91D5F0065E490;
+			remoteInfo = PSDScreenshotHelperTests;
+		};
+		72BE12EE1CA91D600065E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72BE12D21CA91D5F0065E490;
+			remoteInfo = PSDScreenshotHelperUITests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		72BE12F91CA91FC40065E490 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				72BE12FA1CA91FD40065E490 /* PSDScreenshotHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		104D153F1CA974CA0097C585 /* PSDScreenshot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PSDScreenshot.entitlements; sourceTree = "<group>"; };
+		722C6A5B1CA1A5470055C403 /* PSDScreenshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSDScreenshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		722C6A5E1CA1A5470055C403 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		722C6A5F1CA1A5470055C403 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		722C6A621CA1A5470055C403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		722C6A641CA1A5470055C403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		722C6A671CA1A5480055C403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		722C6A691CA1A5480055C403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722C6A6E1CA1A5480055C403 /* PSDScreenshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDScreenshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		722C6A721CA1A5480055C403 /* PSDScreenshotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDScreenshotTests.m; sourceTree = "<group>"; };
+		722C6A741CA1A5480055C403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722C6A791CA1A5480055C403 /* PSDScreenshotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDScreenshotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		722C6A7D1CA1A5480055C403 /* PSDScreenshotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDScreenshotUITests.m; sourceTree = "<group>"; };
+		722C6A7F1CA1A5480055C403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722C6A8C1CA1BB6F0055C403 /* NSDataPSDAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataPSDAdditions.h; sourceTree = "<group>"; };
+		722C6A8D1CA1BB6F0055C403 /* NSDataPSDAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataPSDAdditions.m; sourceTree = "<group>"; };
+		722C6A8E1CA1BB6F0055C403 /* PSDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDLayer.h; sourceTree = "<group>"; };
+		722C6A8F1CA1BB6F0055C403 /* PSDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDLayer.m; sourceTree = "<group>"; };
+		722C6A901CA1BB6F0055C403 /* PSDWriter-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PSDWriter-Prefix.pch"; sourceTree = "<group>"; };
+		722C6A911CA1BB6F0055C403 /* PSDWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDWriter.h; sourceTree = "<group>"; };
+		722C6A921CA1BB6F0055C403 /* PSDWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDWriter.m; sourceTree = "<group>"; };
+		722C6ACF1CA40D270055C403 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
+		722C6AD01CA40D270055C403 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
+		727618C91CA52476009C48FA /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
+		727618CA1CA52476009C48FA /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
+		727618CB1CA52476009C48FA /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
+		727618CF1CA524A5009C48FA /* iconEasyCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconEasyCalc.png; sourceTree = "<group>"; };
+		727618D01CA524A5009C48FA /* iconMeme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconMeme.png; sourceTree = "<group>"; };
+		727618D11CA524A5009C48FA /* iconFallingHearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconFallingHearts.png; sourceTree = "<group>"; };
+		727618D21CA524A5009C48FA /* iconLeafFuide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconLeafFuide.png; sourceTree = "<group>"; };
+		727618D31CA524A5009C48FA /* iconStayFocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStayFocused.png; sourceTree = "<group>"; };
+		727618D41CA524A5009C48FA /* iconBatteryTracker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBatteryTracker.png; sourceTree = "<group>"; };
+		727618D51CA524A5009C48FA /* iconBankingCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBankingCalc.png; sourceTree = "<group>"; };
+		727618D61CA524A5009C48FA /* iconFinanceCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconFinanceCalc.png; sourceTree = "<group>"; };
+		727618D71CA524A5009C48FA /* iconPeriodicTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconPeriodicTable.png; sourceTree = "<group>"; };
+		727618D81CA524A5009C48FA /* iconSnowFall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSnowFall.png; sourceTree = "<group>"; };
+		727618D91CA524A5009C48FA /* iconBackgroundClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBackgroundClock.png; sourceTree = "<group>"; };
+		727618DA1CA524A5009C48FA /* iconStatisticalCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStatisticalCalc.png; sourceTree = "<group>"; };
+		727618DB1CA524A5009C48FA /* iconFinacialCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconFinacialCalc.png; sourceTree = "<group>"; };
+		727618DC1CA524A5009C48FA /* iconEasyTabCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconEasyTabCalc.png; sourceTree = "<group>"; };
+		727618DD1CA524A5009C48FA /* iconFinancialCalculators.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconFinancialCalculators.png; sourceTree = "<group>"; };
+		727618DE1CA524A5009C48FA /* iconStocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconStocks.png; sourceTree = "<group>"; };
+		727618F11CA526F2009C48FA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		727618F31CA52997009C48FA /* capsyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capsyIcon.png; sourceTree = "<group>"; };
+		727618F61CA594E1009C48FA /* IWGlobalHotkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWGlobalHotkey.h; sourceTree = "<group>"; };
+		727618F71CA594E1009C48FA /* IWGlobalHotkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWGlobalHotkey.m; sourceTree = "<group>"; };
+		727618FA1CA59503009C48FA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		727618FC1CA5950E009C48FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSDScreenshotHelper.xcodeproj; path = PSDScreenshotHelper/PSDScreenshotHelper.xcodeproj; sourceTree = "<group>"; };
+		72BE12FB1CA924E30065E490 /* shutterSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shutterSound.wav; sourceTree = "<group>"; };
+		72BE12FF1CA926CC0065E490 /* MenuBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBarIcon.png; sourceTree = "<group>"; };
+		72BE13011CA9294F0065E490 /* bipSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bipSound.wav; sourceTree = "<group>"; };
+		72BE130A1CA942FA0065E490 /* settingsBackground1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsBackground1.png; sourceTree = "<group>"; };
+		72BE130C1CA943B30065E490 /* aboutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutBackground.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		722C6A581CA1A5470055C403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727618FD1CA5950E009C48FA /* QuartzCore.framework in Frameworks */,
+				727618FB1CA59503009C48FA /* Carbon.framework in Frameworks */,
+				727618F21CA526F3009C48FA /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A6B1CA1A5480055C403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A761CA1A5480055C403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		722C6A521CA1A5470055C403 = {
+			isa = PBXGroup;
+			children = (
+				72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */,
+				727618FC1CA5950E009C48FA /* QuartzCore.framework */,
+				727618FA1CA59503009C48FA /* Carbon.framework */,
+				727618F11CA526F2009C48FA /* ServiceManagement.framework */,
+				722C6A5D1CA1A5470055C403 /* PSDScreenshot */,
+				722C6A711CA1A5480055C403 /* PSDScreenshotTests */,
+				722C6A7C1CA1A5480055C403 /* PSDScreenshotUITests */,
+				722C6A5C1CA1A5470055C403 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		722C6A5C1CA1A5470055C403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				722C6A5B1CA1A5470055C403 /* PSDScreenshot.app */,
+				722C6A6E1CA1A5480055C403 /* PSDScreenshotTests.xctest */,
+				722C6A791CA1A5480055C403 /* PSDScreenshotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		722C6A5D1CA1A5470055C403 /* PSDScreenshot */ = {
+			isa = PBXGroup;
+			children = (
+				104D153F1CA974CA0097C585 /* PSDScreenshot.entitlements */,
+				722C6AD51CA40E9B0055C403 /* Resources */,
+				722C6A5E1CA1A5470055C403 /* AppDelegate.h */,
+				722C6A5F1CA1A5470055C403 /* AppDelegate.m */,
+				722C6A661CA1A5480055C403 /* MainMenu.xib */,
+				722C6A641CA1A5470055C403 /* Assets.xcassets */,
+				727618CE1CA5247E009C48FA /* AboutViewController */,
+				727618F91CA594E8009C48FA /* HotKey */,
+				722C6AD21CA40D2D0055C403 /* MenuBar */,
+				722C6A8B1CA1BB5A0055C403 /* PSDClasses */,
+				722C6A691CA1A5480055C403 /* Info.plist */,
+				722C6A611CA1A5470055C403 /* Supporting Files */,
+			);
+			path = PSDScreenshot;
+			sourceTree = "<group>";
+		};
+		722C6A611CA1A5470055C403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				722C6A621CA1A5470055C403 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		722C6A711CA1A5480055C403 /* PSDScreenshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				722C6A721CA1A5480055C403 /* PSDScreenshotTests.m */,
+				722C6A741CA1A5480055C403 /* Info.plist */,
+			);
+			path = PSDScreenshotTests;
+			sourceTree = "<group>";
+		};
+		722C6A7C1CA1A5480055C403 /* PSDScreenshotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				722C6A7D1CA1A5480055C403 /* PSDScreenshotUITests.m */,
+				722C6A7F1CA1A5480055C403 /* Info.plist */,
+			);
+			path = PSDScreenshotUITests;
+			sourceTree = "<group>";
+		};
+		722C6A8B1CA1BB5A0055C403 /* PSDClasses */ = {
+			isa = PBXGroup;
+			children = (
+				722C6A8C1CA1BB6F0055C403 /* NSDataPSDAdditions.h */,
+				722C6A8D1CA1BB6F0055C403 /* NSDataPSDAdditions.m */,
+				722C6A8E1CA1BB6F0055C403 /* PSDLayer.h */,
+				722C6A8F1CA1BB6F0055C403 /* PSDLayer.m */,
+				722C6A901CA1BB6F0055C403 /* PSDWriter-Prefix.pch */,
+				722C6A911CA1BB6F0055C403 /* PSDWriter.h */,
+				722C6A921CA1BB6F0055C403 /* PSDWriter.m */,
+			);
+			name = PSDClasses;
+			sourceTree = "<group>";
+		};
+		722C6AD21CA40D2D0055C403 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				722C6ACF1CA40D270055C403 /* MAAttachedWindow.h */,
+				722C6AD01CA40D270055C403 /* MAAttachedWindow.m */,
+			);
+			name = MenuBar;
+			sourceTree = "<group>";
+		};
+		722C6AD51CA40E9B0055C403 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72BE130C1CA943B30065E490 /* aboutBackground.png */,
+				72BE130A1CA942FA0065E490 /* settingsBackground1.png */,
+				72BE12FF1CA926CC0065E490 /* MenuBarIcon.png */,
+				727618F01CA524CC009C48FA /* Sound */,
+				727618EF1CA524AC009C48FA /* Icons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		727618CE1CA5247E009C48FA /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				727618C91CA52476009C48FA /* AboutWindowController.h */,
+				727618CA1CA52476009C48FA /* AboutWindowController.m */,
+				727618CB1CA52476009C48FA /* AboutWindowController.xib */,
+			);
+			name = AboutViewController;
+			sourceTree = "<group>";
+		};
+		727618EF1CA524AC009C48FA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				727618CF1CA524A5009C48FA /* iconEasyCalc.png */,
+				727618D01CA524A5009C48FA /* iconMeme.png */,
+				727618D11CA524A5009C48FA /* iconFallingHearts.png */,
+				727618D21CA524A5009C48FA /* iconLeafFuide.png */,
+				727618D31CA524A5009C48FA /* iconStayFocused.png */,
+				727618D41CA524A5009C48FA /* iconBatteryTracker.png */,
+				727618D51CA524A5009C48FA /* iconBankingCalc.png */,
+				727618D61CA524A5009C48FA /* iconFinanceCalc.png */,
+				727618D71CA524A5009C48FA /* iconPeriodicTable.png */,
+				727618D81CA524A5009C48FA /* iconSnowFall.png */,
+				727618D91CA524A5009C48FA /* iconBackgroundClock.png */,
+				727618DA1CA524A5009C48FA /* iconStatisticalCalc.png */,
+				727618DB1CA524A5009C48FA /* iconFinacialCalc.png */,
+				727618DC1CA524A5009C48FA /* iconEasyTabCalc.png */,
+				727618DD1CA524A5009C48FA /* iconFinancialCalculators.png */,
+				727618DE1CA524A5009C48FA /* iconStocks.png */,
+				727618F31CA52997009C48FA /* capsyIcon.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		727618F01CA524CC009C48FA /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				72BE13011CA9294F0065E490 /* bipSound.wav */,
+				72BE12FB1CA924E30065E490 /* shutterSound.wav */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		727618F91CA594E8009C48FA /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				727618F61CA594E1009C48FA /* IWGlobalHotkey.h */,
+				727618F71CA594E1009C48FA /* IWGlobalHotkey.m */,
+			);
+			name = HotKey;
+			sourceTree = "<group>";
+		};
+		72BE12E51CA91D5F0065E490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72BE12EB1CA91D600065E490 /* PSDScreenshotHelper.app */,
+				72BE12ED1CA91D600065E490 /* PSDScreenshotHelperTests.xctest */,
+				72BE12EF1CA91D600065E490 /* PSDScreenshotHelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		722C6A5A1CA1A5470055C403 /* PSDScreenshot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 722C6A821CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshot" */;
+			buildPhases = (
+				722C6A571CA1A5470055C403 /* Sources */,
+				722C6A581CA1A5470055C403 /* Frameworks */,
+				722C6A591CA1A5470055C403 /* Resources */,
+				72BE12F91CA91FC40065E490 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSDScreenshot;
+			productName = PSDScreenshot;
+			productReference = 722C6A5B1CA1A5470055C403 /* PSDScreenshot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		722C6A6D1CA1A5480055C403 /* PSDScreenshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 722C6A851CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshotTests" */;
+			buildPhases = (
+				722C6A6A1CA1A5480055C403 /* Sources */,
+				722C6A6B1CA1A5480055C403 /* Frameworks */,
+				722C6A6C1CA1A5480055C403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				722C6A701CA1A5480055C403 /* PBXTargetDependency */,
+			);
+			name = PSDScreenshotTests;
+			productName = PSDScreenshotTests;
+			productReference = 722C6A6E1CA1A5480055C403 /* PSDScreenshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		722C6A781CA1A5480055C403 /* PSDScreenshotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 722C6A881CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshotUITests" */;
+			buildPhases = (
+				722C6A751CA1A5480055C403 /* Sources */,
+				722C6A761CA1A5480055C403 /* Frameworks */,
+				722C6A771CA1A5480055C403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				722C6A7B1CA1A5480055C403 /* PBXTargetDependency */,
+			);
+			name = PSDScreenshotUITests;
+			productName = PSDScreenshotUITests;
+			productReference = 722C6A791CA1A5480055C403 /* PSDScreenshotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		722C6A531CA1A5470055C403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Rares Tamas";
+				TargetAttributes = {
+					722C6A5A1CA1A5470055C403 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4VZABFFJDZ;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					722C6A6D1CA1A5480055C403 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 722C6A5A1CA1A5470055C403;
+					};
+					722C6A781CA1A5480055C403 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 722C6A5A1CA1A5470055C403;
+					};
+				};
+			};
+			buildConfigurationList = 722C6A561CA1A5470055C403 /* Build configuration list for PBXProject "PSDScreenshot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 722C6A521CA1A5470055C403;
+			productRefGroup = 722C6A5C1CA1A5470055C403 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 72BE12E51CA91D5F0065E490 /* Products */;
+					ProjectRef = 72BE12E41CA91D5F0065E490 /* PSDScreenshotHelper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				722C6A5A1CA1A5470055C403 /* PSDScreenshot */,
+				722C6A6D1CA1A5480055C403 /* PSDScreenshotTests */,
+				722C6A781CA1A5480055C403 /* PSDScreenshotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		72BE12EB1CA91D600065E490 /* PSDScreenshotHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PSDScreenshotHelper.app;
+			remoteRef = 72BE12EA1CA91D600065E490 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		72BE12ED1CA91D600065E490 /* PSDScreenshotHelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PSDScreenshotHelperTests.xctest;
+			remoteRef = 72BE12EC1CA91D600065E490 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		72BE12EF1CA91D600065E490 /* PSDScreenshotHelperUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PSDScreenshotHelperUITests.xctest;
+			remoteRef = 72BE12EE1CA91D600065E490 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		722C6A591CA1A5470055C403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727618E01CA524A5009C48FA /* iconMeme.png in Resources */,
+				727618EE1CA524A5009C48FA /* iconStocks.png in Resources */,
+				727618E91CA524A5009C48FA /* iconBackgroundClock.png in Resources */,
+				727618EC1CA524A5009C48FA /* iconEasyTabCalc.png in Resources */,
+				727618E81CA524A5009C48FA /* iconSnowFall.png in Resources */,
+				72BE13001CA926CC0065E490 /* MenuBarIcon.png in Resources */,
+				72BE12FC1CA924E30065E490 /* shutterSound.wav in Resources */,
+				727618E71CA524A5009C48FA /* iconPeriodicTable.png in Resources */,
+				727618E21CA524A5009C48FA /* iconLeafFuide.png in Resources */,
+				72BE13021CA9294F0065E490 /* bipSound.wav in Resources */,
+				727618E41CA524A5009C48FA /* iconBatteryTracker.png in Resources */,
+				727618DF1CA524A5009C48FA /* iconEasyCalc.png in Resources */,
+				727618ED1CA524A5009C48FA /* iconFinancialCalculators.png in Resources */,
+				727618CD1CA52476009C48FA /* AboutWindowController.xib in Resources */,
+				72BE130B1CA942FA0065E490 /* settingsBackground1.png in Resources */,
+				727618E51CA524A5009C48FA /* iconBankingCalc.png in Resources */,
+				727618F41CA52997009C48FA /* capsyIcon.png in Resources */,
+				722C6A651CA1A5470055C403 /* Assets.xcassets in Resources */,
+				727618EA1CA524A5009C48FA /* iconStatisticalCalc.png in Resources */,
+				722C6A681CA1A5480055C403 /* MainMenu.xib in Resources */,
+				72BE130D1CA943B30065E490 /* aboutBackground.png in Resources */,
+				727618E11CA524A5009C48FA /* iconFallingHearts.png in Resources */,
+				727618EB1CA524A5009C48FA /* iconFinacialCalc.png in Resources */,
+				727618E61CA524A5009C48FA /* iconFinanceCalc.png in Resources */,
+				727618E31CA524A5009C48FA /* iconStayFocused.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A6C1CA1A5480055C403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A771CA1A5480055C403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		722C6A571CA1A5470055C403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727618F81CA594E1009C48FA /* IWGlobalHotkey.m in Sources */,
+				727618CC1CA52476009C48FA /* AboutWindowController.m in Sources */,
+				722C6A951CA1BB6F0055C403 /* PSDWriter.m in Sources */,
+				722C6A931CA1BB6F0055C403 /* NSDataPSDAdditions.m in Sources */,
+				722C6A941CA1BB6F0055C403 /* PSDLayer.m in Sources */,
+				722C6AD11CA40D270055C403 /* MAAttachedWindow.m in Sources */,
+				722C6A631CA1A5470055C403 /* main.m in Sources */,
+				722C6A601CA1A5470055C403 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A6A1CA1A5480055C403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				722C6A731CA1A5480055C403 /* PSDScreenshotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		722C6A751CA1A5480055C403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				722C6A7E1CA1A5480055C403 /* PSDScreenshotUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		722C6A701CA1A5480055C403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 722C6A5A1CA1A5470055C403 /* PSDScreenshot */;
+			targetProxy = 722C6A6F1CA1A5480055C403 /* PBXContainerItemProxy */;
+		};
+		722C6A7B1CA1A5480055C403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 722C6A5A1CA1A5470055C403 /* PSDScreenshot */;
+			targetProxy = 722C6A7A1CA1A5480055C403 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		722C6A661CA1A5480055C403 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				722C6A671CA1A5480055C403 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		722C6A801CA1A5480055C403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		722C6A811CA1A5480055C403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		722C6A831CA1A5480055C403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshot/PSDScreenshot.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		722C6A841CA1A5480055C403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshot/PSDScreenshot.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		722C6A861CA1A5480055C403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshot.app/Contents/MacOS/PSDScreenshot";
+			};
+			name = Debug;
+		};
+		722C6A871CA1A5480055C403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshot.app/Contents/MacOS/PSDScreenshot";
+			};
+			name = Release;
+		};
+		722C6A891CA1A5480055C403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshot;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		722C6A8A1CA1A5480055C403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshot;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		72BE12F51CA91F880065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+			};
+			name = Distribution;
+		};
+		72BE12F61CA91F880065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshot/PSDScreenshot.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Distribution;
+		};
+		72BE12F71CA91F880065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshot.app/Contents/MacOS/PSDScreenshot";
+			};
+			name = Distribution;
+		};
+		72BE12F81CA91F880065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshot;
+				USES_XCTRUNNER = YES;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		722C6A561CA1A5470055C403 /* Build configuration list for PBXProject "PSDScreenshot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				722C6A801CA1A5480055C403 /* Debug */,
+				722C6A811CA1A5480055C403 /* Release */,
+				72BE12F51CA91F880065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		722C6A821CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				722C6A831CA1A5480055C403 /* Debug */,
+				722C6A841CA1A5480055C403 /* Release */,
+				72BE12F61CA91F880065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		722C6A851CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				722C6A861CA1A5480055C403 /* Debug */,
+				722C6A871CA1A5480055C403 /* Release */,
+				72BE12F71CA91F880065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		722C6A881CA1A5480055C403 /* Build configuration list for PBXNativeTarget "PSDScreenshotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				722C6A891CA1A5480055C403 /* Debug */,
+				722C6A8A1CA1A5480055C403 /* Release */,
+				72BE12F81CA91F880065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 722C6A531CA1A5470055C403 /* Project object */;
+}

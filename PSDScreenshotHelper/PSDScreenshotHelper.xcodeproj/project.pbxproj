@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72BE12B91CA91D5F0065E490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE12B81CA91D5F0065E490 /* AppDelegate.m */; };
+		72BE12BC1CA91D5F0065E490 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE12BB1CA91D5F0065E490 /* main.m */; };
+		72BE12BE1CA91D5F0065E490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BE12BD1CA91D5F0065E490 /* Assets.xcassets */; };
+		72BE12C11CA91D5F0065E490 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BE12BF1CA91D5F0065E490 /* MainMenu.xib */; };
+		72BE12CC1CA91D5F0065E490 /* PSDScreenshotHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE12CB1CA91D5F0065E490 /* PSDScreenshotHelperTests.m */; };
+		72BE12D71CA91D5F0065E490 /* PSDScreenshotHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE12D61CA91D5F0065E490 /* PSDScreenshotHelperUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72BE12C81CA91D5F0065E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BE12AC1CA91D5F0065E490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72BE12B31CA91D5F0065E490;
+			remoteInfo = PSDScreenshotHelper;
+		};
+		72BE12D31CA91D5F0065E490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BE12AC1CA91D5F0065E490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72BE12B31CA91D5F0065E490;
+			remoteInfo = PSDScreenshotHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		104D15401CA974E90097C585 /* PSDScreenshotHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PSDScreenshotHelper.entitlements; sourceTree = "<group>"; };
+		72BE12B41CA91D5F0065E490 /* PSDScreenshotHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSDScreenshotHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BE12B71CA91D5F0065E490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		72BE12B81CA91D5F0065E490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		72BE12BB1CA91D5F0065E490 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72BE12BD1CA91D5F0065E490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72BE12C01CA91D5F0065E490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		72BE12C21CA91D5F0065E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BE12C71CA91D5F0065E490 /* PSDScreenshotHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDScreenshotHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BE12CB1CA91D5F0065E490 /* PSDScreenshotHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDScreenshotHelperTests.m; sourceTree = "<group>"; };
+		72BE12CD1CA91D5F0065E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BE12D21CA91D5F0065E490 /* PSDScreenshotHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDScreenshotHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BE12D61CA91D5F0065E490 /* PSDScreenshotHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDScreenshotHelperUITests.m; sourceTree = "<group>"; };
+		72BE12D81CA91D5F0065E490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72BE12B11CA91D5F0065E490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12C41CA91D5F0065E490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12CF1CA91D5F0065E490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72BE12AB1CA91D5F0065E490 = {
+			isa = PBXGroup;
+			children = (
+				72BE12B61CA91D5F0065E490 /* PSDScreenshotHelper */,
+				72BE12CA1CA91D5F0065E490 /* PSDScreenshotHelperTests */,
+				72BE12D51CA91D5F0065E490 /* PSDScreenshotHelperUITests */,
+				72BE12B51CA91D5F0065E490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72BE12B51CA91D5F0065E490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72BE12B41CA91D5F0065E490 /* PSDScreenshotHelper.app */,
+				72BE12C71CA91D5F0065E490 /* PSDScreenshotHelperTests.xctest */,
+				72BE12D21CA91D5F0065E490 /* PSDScreenshotHelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72BE12B61CA91D5F0065E490 /* PSDScreenshotHelper */ = {
+			isa = PBXGroup;
+			children = (
+				104D15401CA974E90097C585 /* PSDScreenshotHelper.entitlements */,
+				72BE12B71CA91D5F0065E490 /* AppDelegate.h */,
+				72BE12B81CA91D5F0065E490 /* AppDelegate.m */,
+				72BE12BD1CA91D5F0065E490 /* Assets.xcassets */,
+				72BE12BF1CA91D5F0065E490 /* MainMenu.xib */,
+				72BE12C21CA91D5F0065E490 /* Info.plist */,
+				72BE12BA1CA91D5F0065E490 /* Supporting Files */,
+			);
+			path = PSDScreenshotHelper;
+			sourceTree = "<group>";
+		};
+		72BE12BA1CA91D5F0065E490 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72BE12BB1CA91D5F0065E490 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72BE12CA1CA91D5F0065E490 /* PSDScreenshotHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				72BE12CB1CA91D5F0065E490 /* PSDScreenshotHelperTests.m */,
+				72BE12CD1CA91D5F0065E490 /* Info.plist */,
+			);
+			path = PSDScreenshotHelperTests;
+			sourceTree = "<group>";
+		};
+		72BE12D51CA91D5F0065E490 /* PSDScreenshotHelperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				72BE12D61CA91D5F0065E490 /* PSDScreenshotHelperUITests.m */,
+				72BE12D81CA91D5F0065E490 /* Info.plist */,
+			);
+			path = PSDScreenshotHelperUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72BE12B31CA91D5F0065E490 /* PSDScreenshotHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BE12DB1CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelper" */;
+			buildPhases = (
+				72BE12B01CA91D5F0065E490 /* Sources */,
+				72BE12B11CA91D5F0065E490 /* Frameworks */,
+				72BE12B21CA91D5F0065E490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSDScreenshotHelper;
+			productName = PSDScreenshotHelper;
+			productReference = 72BE12B41CA91D5F0065E490 /* PSDScreenshotHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72BE12C61CA91D5F0065E490 /* PSDScreenshotHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BE12DE1CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelperTests" */;
+			buildPhases = (
+				72BE12C31CA91D5F0065E490 /* Sources */,
+				72BE12C41CA91D5F0065E490 /* Frameworks */,
+				72BE12C51CA91D5F0065E490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72BE12C91CA91D5F0065E490 /* PBXTargetDependency */,
+			);
+			name = PSDScreenshotHelperTests;
+			productName = PSDScreenshotHelperTests;
+			productReference = 72BE12C71CA91D5F0065E490 /* PSDScreenshotHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		72BE12D11CA91D5F0065E490 /* PSDScreenshotHelperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BE12E11CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelperUITests" */;
+			buildPhases = (
+				72BE12CE1CA91D5F0065E490 /* Sources */,
+				72BE12CF1CA91D5F0065E490 /* Frameworks */,
+				72BE12D01CA91D5F0065E490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72BE12D41CA91D5F0065E490 /* PBXTargetDependency */,
+			);
+			name = PSDScreenshotHelperUITests;
+			productName = PSDScreenshotHelperUITests;
+			productReference = 72BE12D21CA91D5F0065E490 /* PSDScreenshotHelperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72BE12AC1CA91D5F0065E490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Rares Tamas";
+				TargetAttributes = {
+					72BE12B31CA91D5F0065E490 = {
+						CreatedOnToolsVersion = 7.2.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					72BE12C61CA91D5F0065E490 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 72BE12B31CA91D5F0065E490;
+					};
+					72BE12D11CA91D5F0065E490 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 72BE12B31CA91D5F0065E490;
+					};
+				};
+			};
+			buildConfigurationList = 72BE12AF1CA91D5F0065E490 /* Build configuration list for PBXProject "PSDScreenshotHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 72BE12AB1CA91D5F0065E490;
+			productRefGroup = 72BE12B51CA91D5F0065E490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72BE12B31CA91D5F0065E490 /* PSDScreenshotHelper */,
+				72BE12C61CA91D5F0065E490 /* PSDScreenshotHelperTests */,
+				72BE12D11CA91D5F0065E490 /* PSDScreenshotHelperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72BE12B21CA91D5F0065E490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BE12BE1CA91D5F0065E490 /* Assets.xcassets in Resources */,
+				72BE12C11CA91D5F0065E490 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12C51CA91D5F0065E490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12D01CA91D5F0065E490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72BE12B01CA91D5F0065E490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BE12BC1CA91D5F0065E490 /* main.m in Sources */,
+				72BE12B91CA91D5F0065E490 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12C31CA91D5F0065E490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BE12CC1CA91D5F0065E490 /* PSDScreenshotHelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BE12CE1CA91D5F0065E490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BE12D71CA91D5F0065E490 /* PSDScreenshotHelperUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72BE12C91CA91D5F0065E490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72BE12B31CA91D5F0065E490 /* PSDScreenshotHelper */;
+			targetProxy = 72BE12C81CA91D5F0065E490 /* PBXContainerItemProxy */;
+		};
+		72BE12D41CA91D5F0065E490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72BE12B31CA91D5F0065E490 /* PSDScreenshotHelper */;
+			targetProxy = 72BE12D31CA91D5F0065E490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72BE12BF1CA91D5F0065E490 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72BE12C01CA91D5F0065E490 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72BE12D91CA91D5F0065E490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		72BE12DA1CA91D5F0065E490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		72BE12DC1CA91D5F0065E490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshotHelper/PSDScreenshotHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PSDScreenshotHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshotHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		72BE12DD1CA91D5F0065E490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshotHelper/PSDScreenshotHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PSDScreenshotHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshotHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		72BE12DF1CA91D5F0065E490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshotHelper.app/Contents/MacOS/PSDScreenshotHelper";
+			};
+			name = Debug;
+		};
+		72BE12E01CA91D5F0065E490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshotHelper.app/Contents/MacOS/PSDScreenshotHelper";
+			};
+			name = Release;
+		};
+		72BE12E21CA91D5F0065E490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshotHelper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		72BE12E31CA91D5F0065E490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshotHelper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		72BE12F11CA91F770065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Distribution;
+		};
+		72BE12F21CA91F770065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PSDScreenshotHelper/PSDScreenshotHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PSDScreenshotHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veghTamas.PSDScreenshotHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		72BE12F31CA91F770065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSDScreenshotHelper.app/Contents/MacOS/PSDScreenshotHelper";
+			};
+			name = Distribution;
+		};
+		72BE12F41CA91F770065E490 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PSDScreenshotHelperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TamasIuliu.PSDScreenshotHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSDScreenshotHelper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72BE12AF1CA91D5F0065E490 /* Build configuration list for PBXProject "PSDScreenshotHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BE12D91CA91D5F0065E490 /* Debug */,
+				72BE12DA1CA91D5F0065E490 /* Release */,
+				72BE12F11CA91F770065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BE12DB1CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BE12DC1CA91D5F0065E490 /* Debug */,
+				72BE12DD1CA91D5F0065E490 /* Release */,
+				72BE12F21CA91F770065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BE12DE1CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BE12DF1CA91D5F0065E490 /* Debug */,
+				72BE12E01CA91D5F0065E490 /* Release */,
+				72BE12F31CA91F770065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BE12E11CA91D5F0065E490 /* Build configuration list for PBXNativeTarget "PSDScreenshotHelperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BE12E21CA91D5F0065E490 /* Debug */,
+				72BE12E31CA91D5F0065E490 /* Release */,
+				72BE12F41CA91F770065E490 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72BE12AC1CA91D5F0065E490 /* Project object */;
+}
