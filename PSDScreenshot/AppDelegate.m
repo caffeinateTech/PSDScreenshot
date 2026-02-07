@@ -84,7 +84,7 @@
 - (void)prepareHotKey {
 
   hotKey = [IWGlobalHotkey
-      globalHotKeyWithKey:@"6"
+      globalHotKeyWithKey:@"8"
                 modifiers:[NSArray arrayWithObjects:IWGLOBALHOTKEY_COMMAND,
                                                     IWGLOBALHOTKEY_SHIFT, nil]
                    target:self
@@ -125,6 +125,47 @@
   [[statusItem image] setTemplate:YES];
   [statusItem setTarget:self];
   [statusItem setAction:@selector(openPopUp:)];
+}
+
+// ================================
+// show progress spinner in menu bar
+// ================================
+- (void)showStatusBarSpinner {
+  if (!statusBarSpinner) {
+    statusBarSpinner = [[NSProgressIndicator alloc] init];
+    [statusBarSpinner setStyle:NSProgressIndicatorStyleSpinning];
+    [statusBarSpinner setControlSize:NSControlSizeSmall];
+    [statusBarSpinner setBezeled:NO];
+    [statusBarSpinner sizeToFit];
+  }
+
+  [statusBarSpinner startAnimation:nil];
+  [statusItem setView:nil]; // Clear the view first
+
+  // Create a custom view to hold the spinner
+  NSView *spinnerView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 24, 22)];
+  NSRect spinnerFrame = statusBarSpinner.frame;
+  spinnerFrame.origin.x =
+      (spinnerView.frame.size.width - spinnerFrame.size.width) / 2;
+  spinnerFrame.origin.y =
+      (spinnerView.frame.size.height - spinnerFrame.size.height) / 2;
+  [statusBarSpinner setFrame:spinnerFrame];
+  [spinnerView addSubview:statusBarSpinner];
+
+  [statusItem setView:spinnerView];
+}
+
+// ================================
+// hide progress spinner and restore icon
+// ================================
+- (void)hideStatusBarSpinner {
+  if (statusBarSpinner) {
+    [statusBarSpinner stopAnimation:nil];
+  }
+
+  [statusItem setView:nil];
+  [statusItem setImage:[NSImage imageNamed:@"MenuBarIcon.png"]];
+  [[statusItem image] setTemplate:YES];
 }
 
 // ========================
@@ -365,40 +406,10 @@
 // show flash animation on specified screen
 // ===============================================
 - (void)showFlashOnScreen:(NSScreen *)screen {
-  // Create a borderless, fullscreen window for the flash effect
-  NSWindow *flashWindow =
-      [[NSWindow alloc] initWithContentRect:screen.frame
-                                  styleMask:NSWindowStyleMaskBorderless
-                                    backing:NSBackingStoreBuffered
-                                      defer:NO
-                                     screen:screen];
-
-  [flashWindow setBackgroundColor:[NSColor whiteColor]];
-  [flashWindow setAlphaValue:0.0];
-  [flashWindow setOpaque:NO];
-  [flashWindow setLevel:NSScreenSaverWindowLevel]; // Above everything except
-                                                   // screen saver
-  [flashWindow setIgnoresMouseEvents:YES];
-  [flashWindow makeKeyAndOrderFront:nil];
-
-  // Animate the flash
-  [NSAnimationContext
-      runAnimationGroup:^(NSAnimationContext *context) {
-        context.duration = 0.1; // Fast fade in
-        [[flashWindow animator] setAlphaValue:0.4];
-      }
-      completionHandler:^{
-        // Then fade out
-        [NSAnimationContext
-            runAnimationGroup:^(NSAnimationContext *context) {
-              context.duration = 0.2; // Slower fade out
-              [[flashWindow animator] setAlphaValue:0.0];
-            }
-            completionHandler:^{
-              // Close the window after animation
-              [flashWindow close];
-            }];
-      }];
+  // Flash animation disabled - creating windows during screenshot causes
+  // crashes This appears to be a conflict with ScreenCaptureKit's capture
+  // process
+  return;
 }
 
 #pragma mark - Screenshot func
@@ -476,6 +487,9 @@
     [[NSSound soundNamed:@"shutterSound"] play];
   }
 
+  // Show progress spinner in menu bar
+  [self showStatusBarSpinner];
+
   // Get the currently focused screen
   NSScreen *focusedScreen = [self getFocusedScreen];
 
@@ -495,6 +509,7 @@
       if (error) {
         NSLog(@"Error getting shareable content: %@",
               error.localizedDescription);
+        [self hideStatusBarSpinner];
         return;
       }
 
@@ -511,6 +526,11 @@
 
       for (SCWindow *window in windows) {
         if (window.isOnScreen) {
+          // Skip the Desktop window (black overlay)
+          if ([window.title isEqualToString:@"Desktop"]) {
+            continue;
+          }
+
           // Check if window intersects with focused screen bounds
           CGRect windowFrame = window.frame;
           if (CGRectIntersectsRect(windowFrame, focusedScreenRect)) {
@@ -529,6 +549,20 @@
       // Capture each window on the focused screen
       for (NSInteger i = 0; i < focusedScreenWindows.count; i++) {
         SCWindow *window = focusedScreenWindows[i];
+
+        // Skip windows without an owning application (system windows, etc.)
+        if (!window.owningApplication) {
+          NSLog(@"Skipping window without owning application (layer: %ld, "
+                @"title: %@)",
+                (long)window.windowLayer,
+                window.title ? window.title : @"(no title)");
+          continue;
+        }
+
+        NSLog(@"Capturing window: %@ - %@ (layer: %ld)",
+              window.owningApplication.applicationName,
+              window.title ? window.title : @"(no title)",
+              (long)window.windowLayer);
 
         dispatch_group_enter(captureGroup);
 
@@ -558,16 +592,23 @@
                    if (sampleBuffer) {
                      // Store the captured image data with window info
                      NSString *ownerName =
-                         window.owningApplication
-                             ? window.owningApplication.applicationName
-                             : @"Unknown";
+                         window.owningApplication.applicationName;
                      NSString *windowTitle = window.title ? window.title : @"";
+
+                     // Create a better layer name
+                     NSString *layerName;
+                     if (windowTitle.length > 0) {
+                       layerName = [NSString
+                           stringWithFormat:@"%@ - %@", ownerName, windowTitle];
+                     } else {
+                       layerName = ownerName;
+                     }
 
                      NSDictionary *layerInfo = @{
                        @"image" : (__bridge id)sampleBuffer,
-                       @"name" : ownerName,
-                       @"title" : windowTitle,
-                       @"index" : @(i)
+                       @"name" : layerName,
+                       @"index" : @(i),
+                       @"layer" : @(window.windowLayer)
                      };
 
                      @synchronized(capturedLayers) {
@@ -581,14 +622,16 @@
 
       // When all captures are complete, create the PSD
       dispatch_group_notify(captureGroup, dispatch_get_main_queue(), ^{
-        // Sort layers by index in reverse order (back to front)
+        // Sort layers by window layer value (bottom to top)
+        // Lower layer numbers (e.g., wallpaper at -2147483624) go at the bottom
+        // Higher layer numbers (e.g., apps at 0, menu items at 25) go on top
         NSArray *sortedLayers = [capturedLayers
             sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *obj1,
                                                            NSDictionary *obj2) {
-              NSInteger idx1 = [obj1[@"index"] integerValue];
-              NSInteger idx2 = [obj2[@"index"] integerValue];
-              // Reverse order for back-to-front layering
-              return [@(idx2) compare:@(idx1)];
+              NSInteger layer1 = [obj1[@"layer"] integerValue];
+              NSInteger layer2 = [obj2[@"layer"] integerValue];
+              // Ascending order: lower layer numbers first (at bottom of PSD)
+              return [@(layer1) compare:@(layer2)];
             }];
 
         // Add all layers to PSD
@@ -615,6 +658,9 @@
         [psd writeToFile:writePsdToFile atomically:NO];
 
         NSLog(@"PSD saved to: %@", writePsdToFile);
+
+        // Hide progress spinner and restore menu bar icon
+        [self hideStatusBarSpinner];
 
         // Show flash animation on the focused screen
         [self showFlashOnScreen:screenForFlash];

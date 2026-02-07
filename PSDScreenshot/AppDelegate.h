@@ -6,55 +6,57 @@
 //  Copyright © 2016 Rares Tamas. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import "MAAttachedWindow.h"
 #import "AboutWindowController.h"
+#import "MAAttachedWindow.h"
+#import <Cocoa/Cocoa.h>
 
 @class IWGlobalHotkey;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-    
-    AboutWindowController *aboutController;
-    
-    IWGlobalHotkey *hotKey;
-    
-    MAAttachedWindow *attachedWindow;
-    
-    NSStatusItem *statusItem;
-    
-    NSMenu *mainMenu;
-    
-    BOOL popupShowed, timedScreenshotEnabled;
-    
-    NSString *pathForPSD;
-    
-    NSTimer *screenshotTimer;
-    
-    int time;
+
+  AboutWindowController *aboutController;
+
+  IWGlobalHotkey *hotKey;
+
+  MAAttachedWindow *attachedWindow;
+
+  NSStatusItem *statusItem;
+
+  NSMenu *mainMenu;
+
+  BOOL popupShowed, timedScreenshotEnabled;
+
+  NSString *pathForPSD;
+
+  NSTimer *screenshotTimer;
+
+  NSProgressIndicator *statusBarSpinner;
+
+  int time;
 }
 
 // attached window
-@property (retain) MAAttachedWindow *attachedWindow;;
+@property(retain) MAAttachedWindow *attachedWindow;
+;
 
-@property (assign) BOOL popupShowed;
+@property(assign) BOOL popupShowed;
 
-@property (weak) IBOutlet NSView *popupView;
+@property(weak) IBOutlet NSView *popupView;
 
 // settings window
-@property (weak) IBOutlet NSWindow *settingsWindow;
+@property(weak) IBOutlet NSWindow *settingsWindow;
 
-@property (weak) IBOutlet NSButton *loginCheckBox;
+@property(weak) IBOutlet NSButton *loginCheckBox;
 
-@property (weak) IBOutlet NSTextField *pathLabel;
+@property(weak) IBOutlet NSTextField *pathLabel;
 
-@property (weak) IBOutlet NSButton *timedScreenshotCheckBox;
+@property(weak) IBOutlet NSButton *timedScreenshotCheckBox;
 
-@property (weak) IBOutlet NSSlider *timeSlider;
+@property(weak) IBOutlet NSSlider *timeSlider;
 
-@property (weak) IBOutlet NSTextField *timeLabel;
+@property(weak) IBOutlet NSTextField *timeLabel;
 
-@property (weak) IBOutlet NSButton *soundCheckBox;
-
+@property(weak) IBOutlet NSButton *soundCheckBox;
 
 // Settings Window Controls
 - (IBAction)clickedSettings:(id)sender;
@@ -69,9 +71,7 @@
 
 - (IBAction)clickedSoundCheckBox:(id)sender;
 
-
 // About Window Control
 - (IBAction)clickedAbout:(id)sender;
 
 @end
-
