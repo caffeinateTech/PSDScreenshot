@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -673,141 +673,188 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="140" y="-36"/>
         </menu>
         <customView id="kt6-Ej-woM">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="176"/>
+            <rect key="frame" x="0.0" y="0.0" width="220" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFF-Vu-vrd">
-                    <rect key="frame" x="60" y="20" width="81" height="25"/>
-                    <buttonCell key="cell" type="roundTextured" title="Quit" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vi-Yp-L0P">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ZFF-Vu-vrd">
+                    <rect key="frame" x="52" y="25" width="116" height="37"/>
+                    <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vi-Yp-L0P">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="nTN-qZ-myk"/>
+                        <constraint firstAttribute="height" constant="30" id="t6w-ct-dsc"/>
+                    </constraints>
                     <connections>
                         <action selector="terminate:" target="-1" id="57h-ny-fwS"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6iC-0y-2y2">
-                    <rect key="frame" x="60" y="110" width="81" height="25"/>
-                    <buttonCell key="cell" type="roundTextured" title="Settings" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yhC-MU-OPx">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Yqa-Rl-JhZ">
+                    <rect key="frame" x="52" y="85" width="116" height="37"/>
+                    <buttonCell key="cell" type="bevel" title="About" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oXn-KD-EMV">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="clickedSettings:" target="Voe-Tx-rLC" id="EKE-zJ-4S9"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqa-Rl-JhZ">
-                    <rect key="frame" x="60" y="65" width="81" height="25"/>
-                    <buttonCell key="cell" type="roundTextured" title="About" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oXn-KD-EMV">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6ll-q6-FVD"/>
+                        <constraint firstAttribute="width" constant="110" id="oaf-FZ-g0z"/>
+                    </constraints>
                     <connections>
                         <action selector="clickedAbout:" target="Voe-Tx-rLC" id="6Qb-na-Eqz"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-iv-2wY">
-                    <rect key="frame" x="0.0" y="155" width="200" height="20"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Press ⌘⇧5 to take screenshot." id="RkB-pe-rs7">
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-iv-2wY">
+                    <rect key="frame" x="11" y="209" width="198" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="VvJ-cv-VHX"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Press ⌘⇧8 to take screenshot." id="RkB-pe-rs7">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="6iC-0y-2y2">
+                    <rect key="frame" x="52" y="145" width="116" height="37"/>
+                    <buttonCell key="cell" type="bevel" title="Settings" bezelStyle="regularSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yhC-MU-OPx">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="K4D-9U-2IF"/>
+                        <constraint firstAttribute="height" constant="30" id="W35-IV-l0X"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickedSettings:" target="Voe-Tx-rLC" id="EKE-zJ-4S9"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="392" y="257"/>
+            <constraints>
+                <constraint firstItem="sz2-iv-2wY" firstAttribute="centerX" secondItem="kt6-Ej-woM" secondAttribute="centerX" id="0kt-DO-L16"/>
+                <constraint firstItem="6iC-0y-2y2" firstAttribute="top" secondItem="sz2-iv-2wY" secondAttribute="bottom" constant="30" id="666-Qw-aRm"/>
+                <constraint firstItem="Yqa-Rl-JhZ" firstAttribute="top" secondItem="6iC-0y-2y2" secondAttribute="bottom" constant="30" id="Asy-aY-8K1"/>
+                <constraint firstItem="sz2-iv-2wY" firstAttribute="top" secondItem="kt6-Ej-woM" secondAttribute="top" constant="8" id="Fzu-4c-o0K"/>
+                <constraint firstItem="ZFF-Vu-vrd" firstAttribute="centerX" secondItem="kt6-Ej-woM" secondAttribute="centerX" id="PyF-a2-tth"/>
+                <constraint firstItem="ZFF-Vu-vrd" firstAttribute="top" secondItem="Yqa-Rl-JhZ" secondAttribute="bottom" constant="30" id="QN7-H0-n0C"/>
+                <constraint firstItem="Yqa-Rl-JhZ" firstAttribute="centerX" secondItem="kt6-Ej-woM" secondAttribute="centerX" id="Zad-bH-8SA"/>
+                <constraint firstItem="6iC-0y-2y2" firstAttribute="centerX" secondItem="kt6-Ej-woM" secondAttribute="centerX" id="eaA-EO-Dmu"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="230.5"/>
         </customView>
-        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Aer-wS-ba1">
+        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Aer-wS-ba1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
-            <rect key="contentRect" x="109" y="138" width="320" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="contentRect" x="109" y="138" width="350" height="400"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
             <view key="contentView" id="XhV-U7-SHy">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-0c-H2b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="settingsBackground1" id="0Io-XL-jNK"/>
-                    </imageView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-vx-f1D">
-                        <rect key="frame" x="60" y="190" width="200" height="20"/>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-vx-f1D">
+                        <rect key="frame" x="149" y="282" width="52" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Timer:" id="5x0-Xu-iSQ">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="system" size="15"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-qN-yu9">
-                        <rect key="frame" x="10" y="154" width="300" height="26"/>
+                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-qN-yu9">
+                        <rect key="frame" x="23" y="236" width="304" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="300" id="64K-hM-k6J"/>
+                            <constraint firstAttribute="height" constant="25" id="Be6-lj-MIp"/>
+                        </constraints>
                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="60" doubleValue="1" tickMarkPosition="above" numberOfTickMarks="60" allowsTickMarkValuesOnly="YES" sliderType="linear" id="IQu-Kf-4vr"/>
                         <connections>
                             <action selector="clickedTimeSlider:" target="Voe-Tx-rLC" id="LkE-6p-wWE"/>
                         </connections>
                     </slider>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atQ-nC-ml0">
-                        <rect key="frame" x="100" y="94" width="120" height="20"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="atQ-nC-ml0">
+                        <rect key="frame" x="113" y="154" width="123" height="19"/>
                         <buttonCell key="cell" type="check" title="Start At Login" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jF3-tl-brz">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="systemMedium" size="15"/>
                         </buttonCell>
                         <connections>
                             <action selector="clickedStartAtLogin:" target="Voe-Tx-rLC" id="VrO-bq-Thw"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssy-uN-DrM">
-                        <rect key="frame" x="12" y="64" width="296" height="20"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Change folder where screenshots will be saved" id="sFb-O0-Fdn">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-YE-Z1r">
-                        <rect key="frame" x="2" y="39" width="316" height="20"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="C4h-jt-3AD">
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euo-Sx-wTB">
-                        <rect key="frame" x="90" y="220" width="140" height="20"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="euo-Sx-wTB">
+                        <rect key="frame" x="97" y="331" width="154" height="19"/>
                         <buttonCell key="cell" type="check" title="Timed Screenshot" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jRJ-aZ-NZD">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="systemMedium" size="15"/>
                         </buttonCell>
                         <connections>
                             <action selector="clickedTimedScreenshot:" target="Voe-Tx-rLC" id="jaL-eF-Mz7"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0u-va-TqF">
-                        <rect key="frame" x="119" y="9" width="81" height="25"/>
-                        <buttonCell key="cell" type="roundTextured" title="Change" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bdo-wl-bS0">
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="l0u-va-TqF">
+                        <rect key="frame" x="117" y="14" width="116" height="37"/>
+                        <buttonCell key="cell" type="bevel" title="Change" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bdo-wl-bS0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OQh-ac-gB2"/>
+                            <constraint firstAttribute="width" constant="110" id="XTo-yz-f5S"/>
+                        </constraints>
                         <connections>
                             <action selector="clickedChangeSavedFolder:" target="Voe-Tx-rLC" id="BlQ-xg-vh9"/>
                         </connections>
                     </button>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQe-Wf-lcl">
-                        <rect key="frame" x="100" y="124" width="120" height="20"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="lQe-Wf-lcl">
+                        <rect key="frame" x="138" y="193" width="72" height="19"/>
                         <buttonCell key="cell" type="check" title="Sound" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="Jm8-ej-bV7">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="systemMedium" size="15"/>
                         </buttonCell>
                         <connections>
                             <action selector="clickedSoundCheckBox:" target="Voe-Tx-rLC" id="Ihs-5O-Ilx"/>
                         </connections>
                     </button>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ssy-uN-DrM">
+                        <rect key="frame" x="101" y="105" width="149" height="19"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Screenshot location:" id="sFb-O0-Fdn">
+                            <font key="font" metaFont="system" size="15"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-YE-Z1r">
+                        <rect key="frame" x="8" y="73" width="334" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="C4h-jt-3AD">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="l0u-va-TqF" firstAttribute="top" secondItem="nCI-YE-Z1r" secondAttribute="bottom" constant="25" id="0dL-jS-oZB"/>
+                    <constraint firstItem="euo-Sx-wTB" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="3AJ-Nf-68j"/>
+                    <constraint firstItem="VGl-qN-yu9" firstAttribute="top" secondItem="IX1-vx-f1D" secondAttribute="bottom" constant="15" id="4IV-R6-nhj"/>
+                    <constraint firstItem="VGl-qN-yu9" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="6er-yP-cj5"/>
+                    <constraint firstItem="lQe-Wf-lcl" firstAttribute="top" secondItem="VGl-qN-yu9" secondAttribute="bottom" constant="30" id="6uz-xR-IiO"/>
+                    <constraint firstItem="atQ-nC-ml0" firstAttribute="top" secondItem="lQe-Wf-lcl" secondAttribute="bottom" constant="20" id="7oe-kK-eZF"/>
+                    <constraint firstItem="Ssy-uN-DrM" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="9gw-nL-OZP"/>
+                    <constraint firstItem="IX1-vx-f1D" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="Ci4-4V-Xwq"/>
+                    <constraint firstItem="nCI-YE-Z1r" firstAttribute="leading" secondItem="XhV-U7-SHy" secondAttribute="leading" constant="10" id="DCb-nj-NUA"/>
+                    <constraint firstItem="nCI-YE-Z1r" firstAttribute="top" secondItem="Ssy-uN-DrM" secondAttribute="bottom" constant="15" id="HpA-3U-7h4"/>
+                    <constraint firstItem="nCI-YE-Z1r" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="LbA-Cd-0Lu"/>
+                    <constraint firstItem="IX1-vx-f1D" firstAttribute="top" secondItem="euo-Sx-wTB" secondAttribute="bottom" constant="30" id="MX3-Ys-ccp"/>
+                    <constraint firstItem="euo-Sx-wTB" firstAttribute="top" secondItem="XhV-U7-SHy" secondAttribute="top" constant="50" id="RF4-PO-F6Y"/>
+                    <constraint firstItem="atQ-nC-ml0" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="aK0-ZA-YkA"/>
+                    <constraint firstItem="l0u-va-TqF" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="cqB-x8-6RU"/>
+                    <constraint firstAttribute="trailing" secondItem="nCI-YE-Z1r" secondAttribute="trailing" constant="10" id="dKc-Aw-Tp0"/>
+                    <constraint firstItem="lQe-Wf-lcl" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="gYY-xx-MGG"/>
+                    <constraint firstItem="Ssy-uN-DrM" firstAttribute="top" secondItem="atQ-nC-ml0" secondAttribute="bottom" constant="30" id="sbb-GX-c9Q"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="392" y="564"/>
+            <point key="canvasLocation" x="555" y="284.5"/>
         </window>
     </objects>
-    <resources>
-        <image name="settingsBackground1" width="640" height="540"/>
-    </resources>
 </document>

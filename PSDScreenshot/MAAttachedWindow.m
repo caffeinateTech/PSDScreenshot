@@ -2,8 +2,8 @@
 #import "AppDelegate.h"
 
 
-#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedRed:76.00/255.00 green:161.00/255.00 blue:175.00/255.00 alpha:0.9]
-#define MAATTACHEDWINDOW_DEFAULT_BORDER_COLOR [NSColor colorWithCalibratedRed:196.00/255.00 green:224.00/255.00 blue:229.0/255.00 alpha:0.8]
+#define MAATTACHEDWINDOW_DEFAULT_BACKGROUND_COLOR [NSColor colorWithCalibratedRed:76.00/255.00 green:161.00/255.00 blue:175.00/255.00 alpha:1.0]
+#define MAATTACHEDWINDOW_DEFAULT_BORDER_COLOR [NSColor colorWithCalibratedRed:196.00/255.00 green:224.00/255.00 blue:229.0/255.00 alpha:0.9]
 
 //#define MAATTACHEDWINDOW_SCALE_FACTOR [[NSScreen mainScreen] backingScaleFactor]
 

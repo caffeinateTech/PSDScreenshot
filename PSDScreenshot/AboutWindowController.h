@@ -13,19 +13,13 @@
 }
 
 @property (strong) IBOutlet NSButton *websiteBtn;
-
-@property (strong) IBOutlet NSButton *facebookBtn;
-
+@property (weak) IBOutlet NSView *containerView;
 @property (strong) IBOutlet NSButton *mailBtn;
 
-
-- (IBAction)clickedIcon:(id)sender;
 
 - (IBAction)clickedRate:(id)sender;
 
 - (IBAction)clickedWebsite:(id)sender;
-
-- (IBAction)clickedFacebook:(id)sender;
 
 - (IBAction)clickedMail:(id)sender;
 

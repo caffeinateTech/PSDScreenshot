@@ -240,8 +240,7 @@
       [[NSUserDefaults standardUserDefaults] setObject:pathForPSD
                                                 forKey:@"pathForPSD"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-    } else if (result == NSModalResponseCancel) { // aici
-
+    } else if (result == NSModalResponseCancel) {
       // run a modal alert
       NSAlert *alert = [[NSAlert alloc] init];
       [alert addButtonWithTitle:@"OK"];
@@ -260,8 +259,6 @@
 // =======================
 - (IBAction)clickedSettings:(id)sender {
 
-  [settingsWindow setOpaque:NO];
-  [settingsWindow setBackgroundColor:[NSColor clearColor]];
   [settingsWindow makeKeyAndOrderFront:self];
 }
 
@@ -572,8 +569,8 @@
 
         // Create configuration for screenshot
         SCStreamConfiguration *config = [[SCStreamConfiguration alloc] init];
-        config.width = screenWidth;
-        config.height = screenHeight;
+        config.width = window.frame.size.width * scaleFactor;
+        config.height = window.frame.size.height * scaleFactor;
         config.showsCursor = NO;
 
         // Capture the window
@@ -608,7 +605,12 @@
                        @"image" : (__bridge id)sampleBuffer,
                        @"name" : layerName,
                        @"index" : @(i),
-                       @"layer" : @(window.windowLayer)
+                       @"layer" : @(window.windowLayer),
+                       @"frame" : [NSValue
+                           valueWithRect:NSRectFromCGRect(window.frame)],
+                       @"screenFrame" : [NSValue
+                           valueWithRect:NSRectFromCGRect(focusedScreenRect)],
+                       @"scaleFactor" : @(scaleFactor)
                      };
 
                      @synchronized(capturedLayers) {
@@ -640,10 +642,24 @@
           NSString *layerName =
               [NSString stringWithFormat:@"%@", layerInfo[@"name"]];
 
+          // Get the window frame, screen frame, and scale factor
+          NSRect windowFrame = [layerInfo[@"frame"] rectValue];
+          NSRect screenFrame = [layerInfo[@"screenFrame"] rectValue];
+          float layerScale = [layerInfo[@"scaleFactor"] floatValue];
+
+          // Calculate offset relative to the screen (in points)
+          // ScreenCaptureKit uses top-left origin (Quartz), so we calculate
+          // relative to screen.origin
+          CGFloat offsetX = windowFrame.origin.x - screenFrame.origin.x;
+          CGFloat offsetY = windowFrame.origin.y - screenFrame.origin.y;
+
+          // IMPORTANT: Convert point-based offsets to pixel-based offsets for
+          // the PSD canvas
           [w addLayerWithCGImage:cgImage
                          andName:layerName
                       andOpacity:1.0
-                       andOffset:CGPointZero];
+                       andOffset:CGPointMake(offsetX * layerScale,
+                                             offsetY * layerScale)];
         }
 
         // Create the PSD data
