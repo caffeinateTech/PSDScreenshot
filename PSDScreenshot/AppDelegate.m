@@ -240,7 +240,8 @@
       [[NSUserDefaults standardUserDefaults] setObject:pathForPSD
                                                 forKey:@"pathForPSD"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-    } else if (result == NSModalResponseCancel) {
+    } else if (result == NSModalResponseCancel) { // aici
+
       // run a modal alert
       NSAlert *alert = [[NSAlert alloc] init];
       [alert addButtonWithTitle:@"OK"];
@@ -259,6 +260,8 @@
 // =======================
 - (IBAction)clickedSettings:(id)sender {
 
+  [settingsWindow setOpaque:NO];
+  [settingsWindow setBackgroundColor:[NSColor clearColor]];
   [settingsWindow makeKeyAndOrderFront:self];
 }
 

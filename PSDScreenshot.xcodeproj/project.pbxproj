@@ -19,24 +19,7 @@
 		722C6AD11CA40D270055C403 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C6AD01CA40D270055C403 /* MAAttachedWindow.m */; };
 		727618CC1CA52476009C48FA /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727618CA1CA52476009C48FA /* AboutWindowController.m */; };
 		727618CD1CA52476009C48FA /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727618CB1CA52476009C48FA /* AboutWindowController.xib */; };
-		727618DF1CA524A5009C48FA /* iconEasyCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618CF1CA524A5009C48FA /* iconEasyCalc.png */; };
-		727618E01CA524A5009C48FA /* iconMeme.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D01CA524A5009C48FA /* iconMeme.png */; };
-		727618E11CA524A5009C48FA /* iconFallingHearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D11CA524A5009C48FA /* iconFallingHearts.png */; };
-		727618E21CA524A5009C48FA /* iconLeafFuide.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D21CA524A5009C48FA /* iconLeafFuide.png */; };
-		727618E31CA524A5009C48FA /* iconStayFocused.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D31CA524A5009C48FA /* iconStayFocused.png */; };
-		727618E41CA524A5009C48FA /* iconBatteryTracker.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D41CA524A5009C48FA /* iconBatteryTracker.png */; };
-		727618E51CA524A5009C48FA /* iconBankingCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D51CA524A5009C48FA /* iconBankingCalc.png */; };
-		727618E61CA524A5009C48FA /* iconFinanceCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D61CA524A5009C48FA /* iconFinanceCalc.png */; };
-		727618E71CA524A5009C48FA /* iconPeriodicTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D71CA524A5009C48FA /* iconPeriodicTable.png */; };
-		727618E81CA524A5009C48FA /* iconSnowFall.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D81CA524A5009C48FA /* iconSnowFall.png */; };
-		727618E91CA524A5009C48FA /* iconBackgroundClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618D91CA524A5009C48FA /* iconBackgroundClock.png */; };
-		727618EA1CA524A5009C48FA /* iconStatisticalCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DA1CA524A5009C48FA /* iconStatisticalCalc.png */; };
-		727618EB1CA524A5009C48FA /* iconFinacialCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DB1CA524A5009C48FA /* iconFinacialCalc.png */; };
-		727618EC1CA524A5009C48FA /* iconEasyTabCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DC1CA524A5009C48FA /* iconEasyTabCalc.png */; };
-		727618ED1CA524A5009C48FA /* iconFinancialCalculators.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DD1CA524A5009C48FA /* iconFinancialCalculators.png */; };
-		727618EE1CA524A5009C48FA /* iconStocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618DE1CA524A5009C48FA /* iconStocks.png */; };
 		727618F21CA526F3009C48FA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618F11CA526F2009C48FA /* ServiceManagement.framework */; };
-		727618F41CA52997009C48FA /* capsyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 727618F31CA52997009C48FA /* capsyIcon.png */; };
 		727618F81CA594E1009C48FA /* IWGlobalHotkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 727618F71CA594E1009C48FA /* IWGlobalHotkey.m */; };
 		727618FB1CA59503009C48FA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618FA1CA59503009C48FA /* Carbon.framework */; };
 		727618FD1CA5950E009C48FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727618FC1CA5950E009C48FA /* QuartzCore.framework */; };
@@ -491,31 +474,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				727618E01CA524A5009C48FA /* iconMeme.png in Resources */,
-				727618EE1CA524A5009C48FA /* iconStocks.png in Resources */,
-				727618E91CA524A5009C48FA /* iconBackgroundClock.png in Resources */,
-				727618EC1CA524A5009C48FA /* iconEasyTabCalc.png in Resources */,
-				727618E81CA524A5009C48FA /* iconSnowFall.png in Resources */,
 				72BE13001CA926CC0065E490 /* MenuBarIcon.png in Resources */,
 				72BE12FC1CA924E30065E490 /* shutterSound.wav in Resources */,
-				727618E71CA524A5009C48FA /* iconPeriodicTable.png in Resources */,
-				727618E21CA524A5009C48FA /* iconLeafFuide.png in Resources */,
 				72BE13021CA9294F0065E490 /* bipSound.wav in Resources */,
-				727618E41CA524A5009C48FA /* iconBatteryTracker.png in Resources */,
-				727618DF1CA524A5009C48FA /* iconEasyCalc.png in Resources */,
-				727618ED1CA524A5009C48FA /* iconFinancialCalculators.png in Resources */,
 				727618CD1CA52476009C48FA /* AboutWindowController.xib in Resources */,
 				72BE130B1CA942FA0065E490 /* settingsBackground1.png in Resources */,
-				727618E51CA524A5009C48FA /* iconBankingCalc.png in Resources */,
-				727618F41CA52997009C48FA /* capsyIcon.png in Resources */,
 				722C6A651CA1A5470055C403 /* Assets.xcassets in Resources */,
-				727618EA1CA524A5009C48FA /* iconStatisticalCalc.png in Resources */,
 				722C6A681CA1A5480055C403 /* MainMenu.xib in Resources */,
 				72BE130D1CA943B30065E490 /* aboutBackground.png in Resources */,
-				727618E11CA524A5009C48FA /* iconFallingHearts.png in Resources */,
-				727618EB1CA524A5009C48FA /* iconFinacialCalc.png in Resources */,
-				727618E61CA524A5009C48FA /* iconFinanceCalc.png in Resources */,
-				727618E31CA524A5009C48FA /* iconStayFocused.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
