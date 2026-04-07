@@ -22,7 +22,7 @@
 
 @synthesize popupView, attachedWindow, popupShowed;
 
-@synthesize settingsWindow, loginCheckBox, pathLabel, timedScreenshotCheckBox,
+@synthesize settingsWindow, pathLabel, timedScreenshotCheckBox,
     timeLabel, timeSlider, soundCheckBox;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -50,10 +50,6 @@
 
   popupShowed = NO;
   timedScreenshotEnabled = NO;
-
-  // LOGIN
-  BOOL tmpLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"login"];
-  [loginCheckBox setState:tmpLogin];
 
   pathForPSD =
       [[NSUserDefaults standardUserDefaults] objectForKey:@"pathForPSD"];
@@ -166,6 +162,10 @@
   [statusItem setView:nil];
   [statusItem setImage:[NSImage imageNamed:@"MenuBarIcon.png"]];
   [[statusItem image] setTemplate:YES];
+  
+  // Restore the target and action after clearing the view
+  [statusItem setTarget:self];
+  [statusItem setAction:@selector(openPopUp:)];
 }
 
 // ========================
@@ -240,7 +240,7 @@
       [[NSUserDefaults standardUserDefaults] setObject:pathForPSD
                                                 forKey:@"pathForPSD"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-    } else if (result == NSModalResponseCancel) { // aici
+    } else if (result == NSModalResponseCancel) {
 
       // run a modal alert
       NSAlert *alert = [[NSAlert alloc] init];
@@ -260,8 +260,6 @@
 // =======================
 - (IBAction)clickedSettings:(id)sender {
 
-  [settingsWindow setOpaque:NO];
-  [settingsWindow setBackgroundColor:[NSColor clearColor]];
   [settingsWindow makeKeyAndOrderFront:self];
 }
 
@@ -286,23 +284,6 @@
   [[NSUserDefaults standardUserDefaults] setInteger:time
                                              forKey:@"timerSeconds"];
   [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-// =========================
-// start app at login on/off
-// =========================
-- (IBAction)clickedStartAtLogin:(id)sender {
-
-  BOOL checkBoxLogin = [sender state];
-
-  [[NSUserDefaults standardUserDefaults] setBool:checkBoxLogin forKey:@"login"];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-
-  if (!SMLoginItemSetEnabled(
-          (__bridge CFStringRef) @"veghTamas.PSDScreenshotHelper",
-          (BOOL)[sender state])) {
-    //  NSLog(@"login item is not succesful");
-  }
 }
 
 // =========================
@@ -507,8 +488,6 @@
                             SCShareableContent *_Nullable content,
                             NSError *_Nullable error) {
       if (error) {
-        NSLog(@"Error getting shareable content: %@",
-              error.localizedDescription);
         [self hideStatusBarSpinner];
         return;
       }
@@ -552,17 +531,8 @@
 
         // Skip windows without an owning application (system windows, etc.)
         if (!window.owningApplication) {
-          NSLog(@"Skipping window without owning application (layer: %ld, "
-                @"title: %@)",
-                (long)window.windowLayer,
-                window.title ? window.title : @"(no title)");
           continue;
         }
-
-        NSLog(@"Capturing window: %@ - %@ (layer: %ld)",
-              window.owningApplication.applicationName,
-              window.title ? window.title : @"(no title)",
-              (long)window.windowLayer);
 
         dispatch_group_enter(captureGroup);
 
@@ -583,8 +553,6 @@
                  completionHandler:^(CGImageRef _Nullable sampleBuffer,
                                      NSError *_Nullable error) {
                    if (error) {
-                     NSLog(@"Error capturing window: %@",
-                           error.localizedDescription);
                      dispatch_group_leave(captureGroup);
                      return;
                    }
@@ -676,8 +644,6 @@
         // Write the PSD data to disk
         [psd writeToFile:writePsdToFile atomically:NO];
 
-        NSLog(@"PSD saved to: %@", writePsdToFile);
-
         // Hide progress spinner and restore menu bar icon
         [self hideStatusBarSpinner];
 
@@ -687,8 +653,6 @@
     }];
   } else {
     // Fallback for older macOS versions (pre-12.3)
-    NSLog(@"ScreenCaptureKit requires macOS 12.3 or later");
-
     // Show alert to user
     dispatch_async(dispatch_get_main_queue(), ^{
       NSAlert *alert = [[NSAlert alloc] init];

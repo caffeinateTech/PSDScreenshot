@@ -46,8 +46,6 @@
 // settings window
 @property(weak) IBOutlet NSWindow *settingsWindow;
 
-@property(weak) IBOutlet NSButton *loginCheckBox;
-
 @property(weak) IBOutlet NSTextField *pathLabel;
 
 @property(weak) IBOutlet NSButton *timedScreenshotCheckBox;
@@ -60,8 +58,6 @@
 
 // Settings Window Controls
 - (IBAction)clickedSettings:(id)sender;
-
-- (IBAction)clickedStartAtLogin:(id)sender;
 
 - (IBAction)clickedChangeSavedFolder:(id)sender;
 

@@ -14,7 +14,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="loginCheckBox" destination="atQ-nC-ml0" id="4ta-K6-BVH"/>
                 <outlet property="pathLabel" destination="nCI-YE-Z1r" id="fp2-6B-39v"/>
                 <outlet property="popupView" destination="kt6-Ej-woM" id="47G-ZQ-XQh"/>
                 <outlet property="settingsWindow" destination="Aer-wS-ba1" id="iRG-6C-8NC"/>
@@ -747,14 +746,14 @@
         </customView>
         <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Aer-wS-ba1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
-            <rect key="contentRect" x="109" y="138" width="350" height="400"/>
+            <rect key="contentRect" x="109" y="138" width="350" height="370"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
             <view key="contentView" id="XhV-U7-SHy">
-                <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="370"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-vx-f1D">
-                        <rect key="frame" x="149" y="282" width="52" height="19"/>
+                        <rect key="frame" x="149" y="252" width="52" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Timer:" id="5x0-Xu-iSQ">
                             <font key="font" metaFont="system" size="15"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -762,7 +761,7 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-qN-yu9">
-                        <rect key="frame" x="23" y="236" width="304" height="33"/>
+                        <rect key="frame" x="23" y="206" width="304" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="64K-hM-k6J"/>
                             <constraint firstAttribute="height" constant="25" id="Be6-lj-MIp"/>
@@ -772,18 +771,8 @@
                             <action selector="clickedTimeSlider:" target="Voe-Tx-rLC" id="LkE-6p-wWE"/>
                         </connections>
                     </slider>
-                    <button translatesAutoresizingMaskIntoConstraints="NO" id="atQ-nC-ml0">
-                        <rect key="frame" x="113" y="154" width="123" height="19"/>
-                        <buttonCell key="cell" type="check" title="Start At Login" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jF3-tl-brz">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="systemMedium" size="15"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="clickedStartAtLogin:" target="Voe-Tx-rLC" id="VrO-bq-Thw"/>
-                        </connections>
-                    </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="euo-Sx-wTB">
-                        <rect key="frame" x="97" y="331" width="154" height="19"/>
+                        <rect key="frame" x="97" y="301" width="154" height="19"/>
                         <buttonCell key="cell" type="check" title="Timed Screenshot" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jRJ-aZ-NZD">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="systemMedium" size="15"/>
@@ -793,7 +782,7 @@
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="l0u-va-TqF">
-                        <rect key="frame" x="117" y="14" width="116" height="37"/>
+                        <rect key="frame" x="117" y="23" width="116" height="37"/>
                         <buttonCell key="cell" type="bevel" title="Change" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bdo-wl-bS0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -807,7 +796,7 @@
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="lQe-Wf-lcl">
-                        <rect key="frame" x="138" y="193" width="72" height="19"/>
+                        <rect key="frame" x="138" y="163" width="72" height="19"/>
                         <buttonCell key="cell" type="check" title="Sound" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="Jm8-ej-bV7">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="systemMedium" size="15"/>
@@ -817,7 +806,7 @@
                         </connections>
                     </button>
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ssy-uN-DrM">
-                        <rect key="frame" x="101" y="105" width="149" height="19"/>
+                        <rect key="frame" x="101" y="114" width="149" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Screenshot location:" id="sFb-O0-Fdn">
                             <font key="font" metaFont="system" size="15"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -825,7 +814,7 @@
                         </textFieldCell>
                     </textField>
                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-YE-Z1r">
-                        <rect key="frame" x="8" y="73" width="334" height="17"/>
+                        <rect key="frame" x="8" y="82" width="334" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="C4h-jt-3AD">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -839,19 +828,17 @@
                     <constraint firstItem="VGl-qN-yu9" firstAttribute="top" secondItem="IX1-vx-f1D" secondAttribute="bottom" constant="15" id="4IV-R6-nhj"/>
                     <constraint firstItem="VGl-qN-yu9" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="6er-yP-cj5"/>
                     <constraint firstItem="lQe-Wf-lcl" firstAttribute="top" secondItem="VGl-qN-yu9" secondAttribute="bottom" constant="30" id="6uz-xR-IiO"/>
-                    <constraint firstItem="atQ-nC-ml0" firstAttribute="top" secondItem="lQe-Wf-lcl" secondAttribute="bottom" constant="20" id="7oe-kK-eZF"/>
                     <constraint firstItem="Ssy-uN-DrM" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="9gw-nL-OZP"/>
                     <constraint firstItem="IX1-vx-f1D" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="Ci4-4V-Xwq"/>
                     <constraint firstItem="nCI-YE-Z1r" firstAttribute="leading" secondItem="XhV-U7-SHy" secondAttribute="leading" constant="10" id="DCb-nj-NUA"/>
+                    <constraint firstItem="Ssy-uN-DrM" firstAttribute="top" secondItem="lQe-Wf-lcl" secondAttribute="bottom" constant="30" id="HJb-qg-s4W"/>
                     <constraint firstItem="nCI-YE-Z1r" firstAttribute="top" secondItem="Ssy-uN-DrM" secondAttribute="bottom" constant="15" id="HpA-3U-7h4"/>
                     <constraint firstItem="nCI-YE-Z1r" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="LbA-Cd-0Lu"/>
                     <constraint firstItem="IX1-vx-f1D" firstAttribute="top" secondItem="euo-Sx-wTB" secondAttribute="bottom" constant="30" id="MX3-Ys-ccp"/>
                     <constraint firstItem="euo-Sx-wTB" firstAttribute="top" secondItem="XhV-U7-SHy" secondAttribute="top" constant="50" id="RF4-PO-F6Y"/>
-                    <constraint firstItem="atQ-nC-ml0" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="aK0-ZA-YkA"/>
                     <constraint firstItem="l0u-va-TqF" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="cqB-x8-6RU"/>
                     <constraint firstAttribute="trailing" secondItem="nCI-YE-Z1r" secondAttribute="trailing" constant="10" id="dKc-Aw-Tp0"/>
                     <constraint firstItem="lQe-Wf-lcl" firstAttribute="centerX" secondItem="XhV-U7-SHy" secondAttribute="centerX" id="gYY-xx-MGG"/>
-                    <constraint firstItem="Ssy-uN-DrM" firstAttribute="top" secondItem="atQ-nC-ml0" secondAttribute="bottom" constant="30" id="sbb-GX-c9Q"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="555" y="284.5"/>
